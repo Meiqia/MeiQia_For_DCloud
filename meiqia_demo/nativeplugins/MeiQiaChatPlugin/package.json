@@ -1,0 +1,61 @@
+{
+	"name": "MeiQiaChatPlugin",
+	"id": "MeiQiaChatPlugin",
+	"version": "1.0.0",
+	"description": "美洽官方Hbuilder插件",
+	"_dp_type":"nativeplugin",
+	"_dp_nativeplugin":{
+		"ios": {
+			"plugins": [
+				{
+					"type": "module",
+					"name": "MeiQiaChatPlugin",
+					"class": "MeiQiaChatModule"
+				}
+			],
+			"hooksClass": "MeiQiaChatPluginProxy",
+			"integrateType": "framework",
+			"deploymentTarget": "9.0",
+			"frameworks": [
+				"MeiQiaSDK.framework"
+			],
+			"embedFrameworks": [
+			                "MeiQiaSDK.framework"
+			            ],
+			"resources": [
+				"MQChatViewAsset.bundle"
+			],
+			"parameters": {
+			                "AppKey": {
+			                    "des": "平台的appkey",
+			                    "key": "MeiQiaChatPlugin:appkey"
+			                }
+			            }
+		},
+		"android": {
+			"plugins": [
+				{
+					"type": "module",
+					"name": "JG-JVerification",
+					"class": "cn.jiguang.uniplugin_jverification.JVerificationWXModule"
+				}
+			],
+			"integrateType": "aar",
+			"minSdkVersion": "19",
+			"permissions": [
+				"android.permission.INTERNET",
+				"android.permission.READ_PHONE_STATE",
+				"android.permission.WRITE_EXTERNAL_STORAGE",
+				"android.permission.ACCESS_NETWORK_STATE",
+				"android.permission.ACCESS_WIFI_STATE",
+				"android.permission.CHANGE_NETWORK_STATE",
+				"android.permission.WRITE_SETTINGS",
+				"android.permission.SYSTEM_ALERT_WINDOW",
+				"android.permission.CHANGE_WIFI_STATE",
+				"android.permission.GET_TASKS",
+				"android.permission.VIBRATE",
+				"android.permission.WAKE_LOCK"
+			]
+		}
+	}
+}
