@@ -2,7 +2,7 @@
 
 > 请您首先把文档全部仔细阅读完毕,再进行您的开发, 如还有疑问，欢迎加入 美洽 SDK 开发 QQ 群：515344099
 
-# Appkey的获取方法
+# AppKey 的获取方法
 
 使用管理员权限账号登陆美洽，在 设置 --> SDK 页面中，选择 添加 App 配置 ，根据提示配置 App 信息，然后添加 APP 即可得到 appkey 用于配置。
 
@@ -24,6 +24,9 @@
 
 # 插件接口使用详解
 
+## 设置 AppKey
+添加插件的时候，需要将从美洽获取到的 appkey 填入配置中
+
 ## 项目中引用插件
 
 ```js
@@ -40,7 +43,7 @@ openMeiQiaChatView() {
 ```
 >说明：美洽所有业务和配置方法都在initChatViewManger()，调用以后才能调用，最后使用showMeiQiaChatView()跳转到聊天页面。
 
-## 配置聊天页面UI样式
+## 配置聊天页面 UI 样式
 
 ```js
 configMeiQiaChatStyle() {
