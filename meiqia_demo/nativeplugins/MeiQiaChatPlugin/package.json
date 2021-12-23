@@ -27,7 +27,7 @@
 			],
 			"parameters": {
 			                "AppKey": {
-			                    "des": "平台的appkey",
+			                    "des": "平台的appkey_iOS",
 			                    "key": "MeiQiaChatPlugin:appkey"
 			                }
 			            }
