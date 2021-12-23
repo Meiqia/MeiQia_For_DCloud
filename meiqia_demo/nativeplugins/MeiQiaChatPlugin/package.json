@@ -2,7 +2,7 @@
 	"name": "MeiQiaChatPlugin",
 	"id": "MeiQiaChatPlugin",
 	"version": "1.0.0",
-	"description": "美洽官方Hbuilder插件",
+	"description": "美洽官方 Hbuilder 插件",
 	"_dp_type": "nativeplugin",
 	"_dp_nativeplugin": {
 		"ios": {
@@ -25,7 +25,7 @@
 			],
 			"parameters": {
 				"AppKey": {
-					"des": "平台的appkey",
+					"des": "美洽平台的 AppKey",
 					"key": "MeiQiaChatPlugin:appkey"
 				}
 			}
@@ -37,26 +37,17 @@
 				"class": "com.meiqia.uniplugin_meiqia.MeiQiaChatPlugin"
 			}],
 			"parameters": {
-				"appkey": {
-					"des": "美洽平台的 appkey",
-					"meiqia_appkey": "MeiQiaChatPlugin:appkey"
+				"AppKey": {
+					"des": "美洽平台的 AppKey",
+					"key": "meiqia_appkey"
 				}
 			},
-			"dependencies": [{
-				"source": "implementation 'com.meiqia:meiqiasdk:3.7.8'"
-			},
-				{
-					"source": "implementation 'com.squareup.okhttp3:okhttp:3.5.0'"
-				},
-				{
-					"source": "'com.github.bumptech.glide:glide:4.9.0'"
-				},
-				{
-					"source": "'com.github.bumptech.glide:compiler:4.9.0'"
-				},
+			"dependencies": [
+				"com.meiqia:meiqiasdk:3.7.8",
+				"com.squareup.okhttp3:okhttp:3.5.0"
 			],
 			"integrateType": "aar",
-			"minSdkVersion": "19",
+			"minSdkVersion": 19,
 			"permissions": [
 				"android.permission.INTERNET",
 				"android.permission.WRITE_EXTERNAL_STORAGE",
