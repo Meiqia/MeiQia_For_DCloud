@@ -11,7 +11,7 @@
 
 <script>
     // 首先需要通过 uni.requireNativePlugin("ModuleName") 获取 module 
-    var testModule = uni.requireNativePlugin("MeiQiaChatPlugin");
+    var testModule = uni.requireNativePlugin("MeiQia-ChatPlugin");
     export default {
         methods: {
             
