@@ -30,7 +30,7 @@
 ## 项目中引用插件
 
 ```js
-const mqModule = uni.requireNativePlugin("MeiQiaChatPlugin");
+const mqModule = uni.requireNativePlugin("MeiQia-ChatPlugin");
 ```
 
 ## 打开默认的美洽聊天页面

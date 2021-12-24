@@ -1,6 +1,6 @@
 {
     "name": "MeiQiaChatPlugin",
-    "id": "MeiQiaChatPlugin",
+    "id": "MeiQia-ChatPlugin",
     "version": "1.0.0",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
@@ -8,7 +8,7 @@
         "ios": {
             "plugins": [{
                 "type": "module",
-                "name": "MeiQiaChatPlugin",
+                "name": "MeiQia-ChatPlugin",
                 "class": "MeiQiaChatModule"
             }],
             "hooksClass": "MeiQiaChatPluginProxy",
@@ -33,7 +33,7 @@
         "android": {
             "plugins": [{
                 "type": "module",
-                "name": "MeiQiaChatPlugin",
+                "name": "MeiQia-ChatPlugin",
                 "class": "com.meiqia.uniplugin_meiqia.MeiQiaChatPlugin"
             }],
             "parameters": {
@@ -45,6 +45,11 @@
             "dependencies": [
                 "com.meiqia:meiqiasdk:3.7.8",
                 "com.squareup.okhttp3:okhttp:3.5.0"
+            ],
+            "abis": [
+                "armeabi-v7a",
+                "arm64-v8a",
+                "x86"
             ],
             "integrateType": "aar",
             "minSdkVersion": 19,
