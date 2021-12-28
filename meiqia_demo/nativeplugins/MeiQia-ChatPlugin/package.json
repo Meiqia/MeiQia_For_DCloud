@@ -24,7 +24,7 @@
                 "MQChatViewAsset.bundle"
             ],
             "parameters": {
-                "AppKey": {
+                "MEIQIA_APPKEY_IOS": {
                     "des": "美洽平台的Appkey_iOS",
                     "key": "MeiQiaChatPlugin:appkey"
                 }
@@ -37,8 +37,8 @@
                 "class": "com.meiqia.uniplugin_meiqia.MeiQiaChatPlugin"
             }],
             "parameters": {
-                "AppKey": {
-                    "des": "美洽平台的AppKey_Android",
+                "MEIQIA_APPKEY_ANDROID": {
+                    "des": "美洽平台的Appkey_Android",
                     "key": "meiqia_appkey"
                 }
             },
