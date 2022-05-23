@@ -16,7 +16,7 @@
 #import "MQPreChatData.h"
 
 
-#define MQSDKVersion @"3.7.8"
+#define MQSDKVersion @"3.8.1"
 @protocol MQManagerDelegate <NSObject>
 
 /**
@@ -513,12 +513,24 @@
 
 
 /**
+ 机器人的回答评价反馈功能是否开启
+ */
++ (BOOL)enableBotEvaluateFeedback;
+
+/**
  对机器人的回答做评价
  @param messageId 消息 id
  */
 + (void)evaluateBotMessage:(NSString *)messageId
                   isUseful:(BOOL)isUseful
                 completion:(void (^)(BOOL success, NSString *text, NSError *error))completion;
+
+/**
+ 采集营销机器人的操作数据
+ @param messageId 消息 id
+ @param index 点击的第几个操作按钮
+ */
++ (void)collectionBotOperationWithMessageId:(NSString *)messageId operationIndex:(int)index;
 
 /**
  强制转人工
