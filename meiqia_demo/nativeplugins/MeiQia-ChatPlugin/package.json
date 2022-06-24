@@ -1,7 +1,7 @@
 {
     "name": "MeiQiaChatPlugin",
     "id": "MeiQia-ChatPlugin",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
     "_dp_nativeplugin": {
@@ -43,7 +43,7 @@
                 }
             },
             "dependencies": [
-                "com.meiqia:meiqiasdk:3.7.8",
+                "com.meiqia:meiqiasdk:3.8.4",
                 "com.squareup.okhttp3:okhttp:3.5.0"
             ],
             "abis": [
