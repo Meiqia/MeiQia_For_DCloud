@@ -43,7 +43,7 @@
                 }
             },
             "dependencies": [
-                "com.meiqia:meiqiasdk:3.7.8",
+                "com.meiqia:meiqiasdk:3.8.4",
                 "com.squareup.okhttp3:okhttp:3.5.0"
             ],
             "abis": [
