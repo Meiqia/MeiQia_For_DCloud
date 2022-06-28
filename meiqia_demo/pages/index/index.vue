@@ -6,6 +6,7 @@
 		<button type="primary" @click="preSendTextMessage()">预发送文字消息</button>
 		<button type="primary" @click="setPreSendProductCardMessage()">发送商品卡片</button>
 		<button type="primary" @click="setClientInfo()">配置个人信息</button>
+		<button type="primary" @click="getUnreadMessages()">获取未读消息</button>
 	</view>
 </template>
 
@@ -59,7 +60,18 @@
 				override: true});
 				testModule.showMeiQiaChatView();
 			},
-        }
+			
+			getUnreadMessages() {
+				
+				testModule.getUnreadMessages((result) => {
+					console.log(result);
+					uni.showToast({
+						title: '调用获取未读数' + result,
+						icon:'none'
+					});
+				});
+			}
+		}
     }
 </script>
 

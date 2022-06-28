@@ -48,35 +48,7 @@
                 "ad" : {}
             }
         },
-        "nativePlugins" : {
-            "MeiQia-ChatPlugin" : {
-                "MEIQIA_APPKEY_ANDROID" : "",
-                "MEIQIA_APPKEY_IOS" : "",
-                "__plugin_info__" : {
-                    "name" : "美洽客服官方 SDK",
-                    "description" : "美洽官方 Hbuilder 插件",
-                    "platforms" : "Android,iOS",
-                    "url" : "https://ext.dcloud.net.cn/plugin?id=7032",
-                    "android_package_name" : "uni.UNI6EAC020",
-                    "ios_bundle_id" : "com.meiqia.dcloud",
-                    "isCloud" : true,
-                    "bought" : 1,
-                    "pid" : "7032",
-                    "parameters" : {
-                        "MEIQIA_APPKEY_ANDROID" : {
-                            "des" : "美洽平台的Appkey_Android",
-                            "key" : "meiqia_appkey",
-                            "value" : ""
-                        },
-                        "MEIQIA_APPKEY_IOS" : {
-                            "des" : "美洽平台的Appkey_iOS",
-                            "key" : "MeiQiaChatPlugin:appkey",
-                            "value" : ""
-                        }
-                    }
-                }
-            }
-        }
+        "nativePlugins" : {}
     },
     /* 快应用特有相关 */
     "quickapp" : {},
