@@ -53,6 +53,16 @@ configMeiQiaChatStyle() {
       "navBarBackgroundColor": "#ffffff", // 设置导航栏的背景色；
       "navBarTitleTxtColor": "#ffffff", // 设置导航栏上的 title 的颜色；
       "enableShowClientAvatar": true, // 是否支持当前用户头像的显示
+      //以下配置暂时只支持ios
+      "incomingMsgTextColor": "#ffffff", // 设置客服发送过来的message的文字颜色；
+      "incomingBubbleColor": "#ffffff", // 设置客服发送过来的message气泡颜色；
+      "outgoingMsgTextColor": "#ffffff", // 设置用户发送出去的message的文字颜色
+      "outgoingBubbleColor": "#ffffff", // 设置用户发送出去的message气泡颜色；
+      "eventTextColor": "#ffffff", // 设置事件流的显示文字的颜色；
+      "navTitleFont": 15, // 设置导航栏上的title的字体大小
+      "backgroundColor": "#ffffff", // 聊天窗口背景色；
+      "enableRoundAvatar": false, // 是否开启圆形头像；
+      "enableIncomingAvatar": true, // 是否支持左边头像的显示
     });
 
     mqModule.showMeiQiaChatView();
@@ -174,11 +184,42 @@ configClientInfo() {
 getUnreadMessages() {
     testModule.getUnreadMessages((result) => {
         uni.showToast({
-            title: '调用获取未读数' + result,
+            title: '调用获取未读消息' + result,
             icon:'none'
         });
     });
 }
+```
+>返回未读消息的数组，数据结构大体是：
+
+```js
+[{
+    "id": "26136869504",
+    "agent_id": "1525407",
+    "content_type": "text",
+    "conversation_id": "3682151000",
+    "type": "message",
+    "action": "message",
+    "track_id": "2BF3IyEcxfbjuF9Pdo9NlkAtwGt",
+    "created_on": "1656487957.360000",
+    "message_user_name": "客服某某",
+    "message_avatar": "https:/xxx.jpg",
+    "from_type": "agent",
+    "content": "23132"
+}, {
+    "id": "26136869068",
+    "agent_id": "1525407",
+    "content_type": "text",
+    "conversation_id": "3682151000",
+    "type": "message",
+    "action": "message",
+    "track_id": "2BF3IyEcxfbjuF9Pdo9NlkAtwGt",
+    "created_on": "1656487955.565000",
+    "message_user_name": "客服某某",
+    "message_avatar": "https://xxx.jpg",
+    "from_type": "agent",
+    "content": "112323123"
+}]
 ```
 
 ## 使用美洽留言页面
