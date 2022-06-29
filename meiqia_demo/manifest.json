@@ -2,8 +2,8 @@
     "name" : "meiqia_demo",
     "appid" : "__UNI__6EAC020",
     "description" : "",
-    "versionName" : "1.0.3",
-    "versionCode" : 600,
+    "versionName" : "1.0.5",
+    "versionCode" : 602,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -48,7 +48,35 @@
                 "ad" : {}
             }
         },
-        "nativePlugins" : {}
+        "nativePlugins" : {
+            "MeiQia-ChatPlugin" : {
+                "MEIQIA_APPKEY_IOS" : "056447918b06b0393ba6d85a2542919f",
+                "MEIQIA_APPKEY_ANDROID" : "056447918b06b0393ba6d85a2542919f",
+                "__plugin_info__" : {
+                    "name" : "MeiQiaChatPlugin",
+                    "description" : "美洽官方 Hbuilder 插件",
+                    "platforms" : "Android,iOS",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {
+                        "MEIQIA_APPKEY_IOS" : {
+                            "des" : "美洽平台的Appkey_iOS",
+                            "key" : "MeiQiaChatPlugin:appkey",
+                            "value" : ""
+                        },
+                        "MEIQIA_APPKEY_ANDROID" : {
+                            "des" : "美洽平台的Appkey_Android",
+                            "key" : "meiqia_appkey",
+                            "value" : ""
+                        }
+                    }
+                }
+            }
+        }
     },
     /* 快应用特有相关 */
     "quickapp" : {},

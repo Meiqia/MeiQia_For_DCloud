@@ -240,7 +240,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-uni-view",
+    "uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
     [
       _c(
@@ -302,6 +302,18 @@ var render = function() {
           }
         },
         [_vm._v("配置个人信息")]
+      ),
+      _c(
+        "v-uni-button",
+        {
+          attrs: { type: "primary", _i: 6 },
+          on: {
+            click: function($event) {
+              return _vm.$handleViewEvent($event)
+            }
+          }
+        },
+        [_vm._v("获取未读消息")]
       )
     ],
     1

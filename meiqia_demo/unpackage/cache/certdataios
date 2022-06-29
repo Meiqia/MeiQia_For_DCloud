@@ -1,2 +1,3 @@
-iosProfile=/Users/shunxing/Desktop/证书/美洽sdk/meiqia_dcloud_dev.mobileprovision
-ioscertFile=/Users/shunxing/Desktop/证书/美洽sdk/meiqiaDcloud.p12
+iosProfile=/Users/shunxing/Desktop/Meiqia_DCloud/meiqia_dcloud_dev.mobileprovision
+ioscertFile=/Users/shunxing/Desktop/Meiqia_DCloud/meiqiaDcloud_dev.p12
+ioscertPassword=MxjJ+BGDGjIYi2aqLp7KdQ==

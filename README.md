@@ -19,6 +19,7 @@
 |setScheduledGroupId()|指定分配客服组|
 |setLoginCustomizedId()|使用开发者自定义的id上线|
 |setClientInfo()|设置顾客的自定义信息|
+|getUnreadMessages()|获取当前未读消息数|
 |showMeiQiaChatView()|跳转到聊天页面|
 |showMQMessageForm()|打开美洽留言界面|
 
@@ -167,6 +168,18 @@ configClientInfo() {
 
 >如果还要添加更多的自定义字段，请到工作台的 设置页面 -> 顾客 -> 顾客管理 -> 顾客名片字段 -> 自定义字段  中添加想要的字段。
 
+## 获取当前未读消息数
+
+```js
+getUnreadMessages() {
+    testModule.getUnreadMessages((result) => {
+        uni.showToast({
+            title: '调用获取未读数' + result,
+            icon:'none'
+        });
+    });
+}
+```
 
 ## 使用美洽留言页面
 
@@ -176,3 +189,33 @@ openMeiQiaMessageForm() {
 },
 ```
 >不用调用initChatViewManger，直接就可以跳转。
+
+## iOS离线推送说明
+
+首先需要设置服务器地址，请使用美洽管理员帐号登录 [美洽](http://www.meiqia.com)，在「设置」 -\> 「SDK」中设置。
+
+### 推送消息数据结构
+
+当有消息需要推送时，美洽服务器会向开发者设置的服务器地址发送推送消息，方法类型为 *POST*，数据格式为 *JSON* 。
+
+发送的请求格式介绍：
+
+request.header.authorization 为数据签名。
+
+request.body 为消息数据，数据结构为：
+
+|Key|说明|
+|---|---|
+|messageId|消息 id|
+|content|消息内容|
+|messageTime|发送时间|
+|fromName|发送人姓名|
+|deviceToken|发送对象设备的 deviceToken，格式为字符串|
+|clientId|发送对象的顾客 id|
+|customizedId|开发者传的自定义 id|
+|contentType|消息内容类型 - text/photo/audio|
+|deviceOS|设备系统|
+|customizedData|开发者上传的自定义的属性|
+|type|消息类型 - mesage 普通消息 / welcome 欢迎消息 / ending 结束消息 / remark 评价消息 / 留言消息|
+
+>注意：开发者需要自己请求注册推送，让用户授权

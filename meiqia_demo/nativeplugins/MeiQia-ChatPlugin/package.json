@@ -1,7 +1,7 @@
 {
     "name": "MeiQiaChatPlugin",
     "id": "MeiQia-ChatPlugin",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
     "_dp_nativeplugin": {
