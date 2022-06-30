@@ -247,7 +247,8 @@ request.body 为消息数据，数据结构为：
 
 |Key|说明|
 |---|---|
-|messageId|消息 id|
+|id|消息 id|
+|messageId|当前对话的会话 id|
 |content|消息内容|
 |messageTime|发送时间|
 |fromName|发送人姓名|
