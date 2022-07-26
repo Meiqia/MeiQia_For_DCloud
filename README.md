@@ -31,6 +31,7 @@
 ## 项目中引用插件
 
 ```js
+// 务必先生成自定义基座，然后运行的时候使用自定义基座，否则会出现找不到插件的错误
 const mqModule = uni.requireNativePlugin("MeiQia-ChatPlugin");
 ```
 
