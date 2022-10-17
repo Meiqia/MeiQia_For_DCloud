@@ -19,7 +19,7 @@
 |setScheduledGroupId()|指定分配客服组|
 |setLoginCustomizedId()|使用开发者自定义的id上线|
 |setClientInfo()|设置顾客的自定义信息|
-|getUnreadMessages()|获取当前未读消息数|
+|getUnreadMessages()|获取当前未读消息|
 |showMeiQiaChatView()|跳转到聊天页面|
 |showMQMessageForm()|打开美洽留言界面|
 
@@ -179,7 +179,7 @@ configClientInfo() {
 
 >如果还要添加更多的自定义字段，请到工作台的 设置页面 -> 顾客 -> 顾客管理 -> 顾客名片字段 -> 自定义字段  中添加想要的字段。
 
-## 获取当前未读消息数
+## 获取当前未读消息
 
 ```js
 getUnreadMessages() {
