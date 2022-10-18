@@ -1,7 +1,7 @@
 {
     "name": "MeiQiaChatPlugin",
     "id": "MeiQia-ChatPlugin",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
     "_dp_nativeplugin": {
@@ -13,7 +13,10 @@
             }],
             "hooksClass": "MeiQiaChatPluginProxy",
             "integrateType": "framework",
-            "deploymentTarget": "9.0",
+            "deploymentTarget": "11.0",
+			"validArchitectures": [    
+			        "arm64"
+			],
             "frameworks": [
                 "MeiQiaSDK.framework"
             ],
