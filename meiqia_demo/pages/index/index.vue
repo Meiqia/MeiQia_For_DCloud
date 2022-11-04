@@ -44,7 +44,11 @@
 				productUrl:"https://meiqia.com",
 				salesCount:50
 				});
-				
+				testModule.setLinkTapCallback((url) => {
+					console.log(url);
+					// 退出美洽客服页面
+					testModule.dismiss();
+				})
 				testModule.showMeiQiaChatView();
 			},
 			

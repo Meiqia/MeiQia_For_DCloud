@@ -22,6 +22,8 @@
 |getUnreadMessages()|获取当前未读消息|
 |showMeiQiaChatView()|跳转到聊天页面|
 |showMQMessageForm()|打开美洽留言界面|
+|dismiss()|退出聊天页面|
+|setLinkTapCallback()|监听对话中的链接点击|
 
 # 插件接口使用详解
 
@@ -225,7 +227,7 @@ getUnreadMessages() {
 
 ```js
 dismiss() {
-    testModule.getUnreadMessages.dismiss();
+    testModule.dismiss();
 }
 ```
 

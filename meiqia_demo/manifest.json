@@ -2,8 +2,8 @@
     "name" : "meiqia_demo",
     "appid" : "__UNI__6EAC020",
     "description" : "",
-    "versionName" : "1.0.7",
-    "versionCode" : 608,
+    "versionName" : "1.0.8",
+    "versionCode" : 610,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -52,8 +52,8 @@
         },
         "nativePlugins" : {
             "MeiQia-ChatPlugin" : {
-                "MEIQIA_APPKEY_IOS" : "056447918b06b0393ba6d85a2542919f",
-                "MEIQIA_APPKEY_ANDROID" : "056447918b06b0393ba6d85a2542919f",
+                "MEIQIA_APPKEY_IOS" : "美洽客服管理后台申请appkey",
+                "MEIQIA_APPKEY_ANDROID" : "美洽客服管理后台申请appkey",
                 "__plugin_info__" : {
                     "name" : "MeiQiaChatPlugin",
                     "description" : "美洽官方 Hbuilder 插件",
