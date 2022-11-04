@@ -173,8 +173,6 @@ configClientInfo() {
 |email|邮件|
 |weibo|微博|
 |avatar|头像 URL|
-|tags|标签，数组形式，且必须是企业中已经存在的标签|
-|source|顾客来源|
 |comment|备注|
 
 >如果还要添加更多的自定义字段，请到工作台的 设置页面 -> 顾客 -> 顾客管理 -> 顾客名片字段 -> 自定义字段  中添加想要的字段。
@@ -221,6 +219,26 @@ getUnreadMessages() {
     "from_type": "agent",
     "content": "112323123"
 }]
+```
+
+## 关闭对话页
+
+```js
+dismiss() {
+    testModule.getUnreadMessages.dismiss();
+}
+```
+
+## 监听对话中的链接点击
+
+```js
+// ios 目前只支持商品卡片的点击回调
+// 开发者自己处理 url 点击，注意：设置监听回调后,将不再跳转网页.如果需要跳转,开发者需要自行处理
+setLinkTapCallback() {
+    testModule.setLinkTapCallback((url) => {
+        console.log('url = ' + url);
+    });
+}
 ```
 
 ## 使用美洽留言页面
