@@ -15,6 +15,7 @@
 |setPreSendTextMessage()|预发送文本信息|
 |setPreSendProductCardMessage()|预发送商品卡片信息|
 |enableSendVoiceMessage()|是否支持发送语音信息|
+|enablePhotoLibraryEdit()|是否支持相册选择图片可裁剪|
 |setScheduledAgentId()|指定分配客服|
 |setScheduledGroupId()|指定分配客服组|
 |setScheduledRule()|指定分配客服/客服组，该客服/客服组不在线，如何转接的规则|
@@ -110,6 +111,17 @@ enableSendVoiceMessage() {
 },
 ```
 >说明：是否发送语音、图片，默认都是支持的。 接收/发送消息的声音，也是默认开启的。
+
+## 是否支持相册选择图片可裁剪，只支持iOS
+
+```js
+enablePhotoLibraryEdit() {
+    mqModule.initChatViewManger();
+    mqModule.enablePhotoLibraryEdit(false); // 默认支持
+    mqModule.showMeiQiaChatView();
+},
+```
+>说明：这个方法是针对iOS的
 
 
 ## 设置指定分配的客服
