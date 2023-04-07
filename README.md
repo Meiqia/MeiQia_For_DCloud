@@ -17,6 +17,7 @@
 |enableSendVoiceMessage()|是否支持发送语音信息|
 |setScheduledAgentId()|指定分配客服|
 |setScheduledGroupId()|指定分配客服组|
+|setScheduledRule()|指定分配客服/客服组，该客服/客服组不在线，如何转接的规则|
 |setLoginCustomizedId()|使用开发者自定义的id上线|
 |setClientInfo()|设置顾客的自定义信息|
 |getUnreadMessages()|获取当前未读消息|
@@ -132,6 +133,25 @@ configScheduledAgentId() {
 },
 ```
 >说明：如果设置了分配给客服id，以分配给客服id为优先
+
+## 设置指定分配的客服/客服组的转接规则
+
+```js
+configScheduledAgentId() {
+    mqModule.initChatViewManger();
+    mqModule.setScheduledGroupId("客服组id");
+    mqModule.setScheduledRule(1);  //不转接给任何人
+    mqModule.showMeiQiaChatView();
+},
+```
+>说明：指定分配客服/客服组，该客服/客服组不在线，如何转接的规则
+>
+>setScheduledRule的value值：
+> vaule == 1； //不转接给任何人
+> vaule == 2； //转接给组内的人
+> vaule == 3； //转接给企业其他随机一个人
+> 
+> 不调用setScheduledRule方法，默认就是按照 vaule == 3的规则分配
 
 
 ## 使用开发者自定义的id上线
