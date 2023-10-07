@@ -14,9 +14,9 @@
             "hooksClass": "MeiQiaChatPluginProxy",
             "integrateType": "framework",
             "deploymentTarget": "11.0",
-			"validArchitectures": [    
-			        "arm64"
-			],
+            "validArchitectures": [    
+                    "arm64"
+            ],
             "frameworks": [
                 "MeiQiaSDK.framework"
             ],
@@ -46,8 +46,7 @@
                 }
             },
             "dependencies": [
-                "com.meiqia:meiqiasdk:3.9.10",
-                "com.squareup.okhttp3:okhttp:3.5.0"
+                "com.meiqia:androidx:4.0.3"
             ],
             "abis": [
                 "armeabi-v7a",
@@ -55,7 +54,8 @@
                 "x86"
             ],
             "integrateType": "aar",
-            "minSdkVersion": 19,
+            "minSdkVersion": 21,
+            "useAndroidX": true,
             "permissions": [
                 "android.permission.INTERNET",
                 "android.permission.WRITE_EXTERNAL_STORAGE",
