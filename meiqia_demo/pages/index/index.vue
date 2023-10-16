@@ -7,6 +7,7 @@
 		<button type="primary" @click="setPreSendProductCardMessage()">发送商品卡片</button>
 		<button type="primary" @click="setClientInfo()">配置个人信息</button>
 		<button type="primary" @click="getUnreadMessages()">获取未读消息</button>
+		<button type="primary" @click="getUnreadMessagesWithCustomizedId()">获取自定义id未读消息</button>
 	</view>
 </template>
 
@@ -70,7 +71,17 @@
 				testModule.getUnreadMessages((result) => {
 					console.log(result);
 					uni.showToast({
-						title: '调用获取未读数' + result,
+						title: '调用获取未读数' + result.length,
+						icon:'none'
+					});
+				});
+			},
+			
+			getUnreadMessagesWithCustomizedId() {				
+				testModule.getUnreadMessagesWithCustomizedId("111111", (result) => {
+					console.log(result);
+					uni.showToast({
+						title: '调用获取未读数' + result.length,
 						icon:'none'
 					});
 				});

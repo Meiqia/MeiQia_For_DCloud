@@ -26,6 +26,7 @@
 |showMQMessageForm()|打开美洽留言界面|
 |dismiss()|退出聊天页面|
 |setLinkTapCallback()|监听对话中的链接点击|
+|getUnreadMessagesWithCustomizedId()|根据 customizedId 获取未读消息|
 
 # 插件接口使用详解
 
@@ -283,6 +284,19 @@ openMeiQiaMessageForm() {
 },
 ```
 >不用调用initChatViewManger，直接就可以跳转。
+
+## 根据 customizedId 获取未读消息
+
+```js
+getUnreadMessagesWithCustomizedId() {
+    testModule.getUnreadMessagesWithCustomizedId("111111", (result) => {
+        uni.showToast({
+            title: '调用获取未读消息' + result,
+            icon:'none'
+        });
+    });
+}
+```
 
 ## iOS离线推送说明
 
