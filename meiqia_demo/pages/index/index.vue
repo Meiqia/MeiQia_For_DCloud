@@ -8,6 +8,8 @@
 		<button type="primary" @click="setClientInfo()">配置个人信息</button>
 		<button type="primary" @click="getUnreadMessages()">获取未读消息</button>
 		<button type="primary" @click="getUnreadMessagesWithCustomizedId()">获取自定义id未读消息</button>
+		<button type="primary" @click="endCurrentConversation()">结束当前对话</button>
+		<button type="primary" @click="switchAppkey()">切换appkey登录</button>
 	</view>
 </template>
 
@@ -84,6 +86,28 @@
 						title: '调用获取未读数' + result.length,
 						icon:'none'
 					});
+				});
+			},
+			
+			endCurrentConversation() {
+				testModule.endCurrentConversation((result) => {
+					console.log('结束对话 ==== ' + result);
+					if (result) {
+						console.log('结束成功');
+					}else {
+						console.log('结束失败');
+					}
+				});
+			},
+			
+			switchAppkey() {
+				testModule.switchAppkey('5318abacb9406122d4970f17c80f5ec3', (result) => {
+					console.log('clientId：' + result);
+					if (result.length > 0) {
+						console.log('切换成功');
+					}else { 
+						console.log('切换失败');
+					}
 				});
 			}
 		}
