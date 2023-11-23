@@ -27,6 +27,8 @@
 |dismiss()|退出聊天页面|
 |setLinkTapCallback()|监听对话中的链接点击|
 |getUnreadMessagesWithCustomizedId()|根据 customizedId 获取未读消息|
+|endCurrentConversation()|结束当前对话|
+|switchAppkey()|切换appkey登录|
 
 # 插件接口使用详解
 
@@ -294,6 +296,35 @@ getUnreadMessagesWithCustomizedId() {
             title: '调用获取未读消息' + result,
             icon:'none'
         });
+    });
+}
+```
+
+## 结束当前对话
+
+```js
+endCurrentConversation() {
+    testModule.endCurrentConversation((result) => {
+        console.log('结束对话 ==== ' + result);
+        if (result) {
+            console.log('结束成功');
+        }else {
+            console.log('结束失败');
+        }
+    });
+```
+
+## 切换appkey登录
+
+```js
+switchAppkey() {
+    testModule.switchAppkey('22222', (result) => {
+        console.log('clientId：' + result);
+        if (result.length > 0) {
+            console.log('切换成功');
+        }else { 
+            console.log('切换失败');
+        }
     });
 }
 ```

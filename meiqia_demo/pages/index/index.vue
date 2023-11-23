@@ -101,7 +101,7 @@
 			},
 			
 			switchAppkey() {
-				testModule.switchAppkey('5318abacb9406122d4970f17c80f5ec3', (result) => {
+				testModule.switchAppkey('22222', (result) => {
 					console.log('clientId：' + result);
 					if (result.length > 0) {
 						console.log('切换成功');
