@@ -2,8 +2,8 @@
     "name" : "meiqia_demo",
     "appid" : "__UNI__6EAC020",
     "description" : "",
-    "versionName" : "1.1.4",
-    "versionCode" : 615,
+    "versionName" : "1.1.5",
+    "versionCode" : 616,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {

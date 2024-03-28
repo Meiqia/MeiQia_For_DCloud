@@ -10,67 +10,64 @@
 		<button type="primary" @click="getUnreadMessagesWithCustomizedId()">获取自定义id未读消息</button>
 		<button type="primary" @click="endCurrentConversation()">结束当前对话</button>
 		<button type="primary" @click="switchAppkey()">切换appkey登录</button>
+		<button type="primary" @click="configMeiQiaChatStyle()">聊天页面 UI 样式</button>
 	</view>
 </template>
 
 <script>
     // 首先需要通过 uni.requireNativePlugin("ModuleName") 获取 module 
-    var testModule = uni.requireNativePlugin("MeiQia-ChatPlugin");
+    var mqModule = uni.requireNativePlugin("MeiQia-ChatPlugin");
     export default {
         methods: {
-            
             openMeiQiaChatView() {
                 // 调用同步方法
-                testModule.initChatViewManger();
-				testModule.showMeiQiaChatView();
+                mqModule.initChatViewManger();
+				mqModule.showMeiQiaChatView();
             },
 			
 			openMeiQiaMessageForm() {
 			    // 调用同步方法
-			    testModule.showMQMessageForm();
+			    mqModule.showMQMessageForm();
 			},
 			
 			preSendTextMessage() {
 			    // 调用同步方法
-			    testModule.initChatViewManger();
-			    testModule.setPreSendTextMessage("订单号是:48611123");
-				testModule.showMeiQiaChatView();
+			    mqModule.initChatViewManger();
+			    mqModule.setPreSendTextMessage("订单号是:48611123");
+				mqModule.showMeiQiaChatView();
 			},
 			
 			setPreSendProductCardMessage() {
-				
-				testModule.initChatViewManger();
-				testModule.setPreSendProductCardMessage({
+				mqModule.initChatViewManger();
+				mqModule.setPreSendProductCardMessage({
 				pictureUrl : "https://file.pisen.com.cn/QJW3C1000WEB/Product/201701/16305409655404.jpg", 	
 				title: "456456123",
 				description:"描述的内容啊",
 				productUrl:"https://meiqia.com",
 				salesCount:50
 				});
-				testModule.setLinkTapCallback((url) => {
+				mqModule.setLinkTapCallback((url) => {
 					console.log(url);
 					// 退出美洽客服页面
-					testModule.dismiss();
+					mqModule.dismiss();
 				})
-				testModule.showMeiQiaChatView();
+				mqModule.showMeiQiaChatView();
 			},
 			
 			setClientInfo() {
-				
-				testModule.initChatViewManger();
-				testModule.setClientInfo({
+				mqModule.initChatViewManger();
+				mqModule.setClientInfo({
 				clientInfo:{
 					age:"22",
 					weixin: "5545666",
 					qq: "45665445"
 					}, 
 				override: true});
-				testModule.showMeiQiaChatView();
+				mqModule.showMeiQiaChatView();
 			},
 			
 			getUnreadMessages() {
-				
-				testModule.getUnreadMessages((result) => {
+				mqModule.getUnreadMessages((result) => {
 					console.log(result);
 					uni.showToast({
 						title: '调用获取未读数' + result.length,
@@ -80,7 +77,7 @@
 			},
 			
 			getUnreadMessagesWithCustomizedId() {				
-				testModule.getUnreadMessagesWithCustomizedId("111111", (result) => {
+				mqModule.getUnreadMessagesWithCustomizedId("111111", (result) => {
 					console.log(result);
 					uni.showToast({
 						title: '调用获取未读数' + result.length,
@@ -88,9 +85,9 @@
 					});
 				});
 			},
-			
+
 			endCurrentConversation() {
-				testModule.endCurrentConversation((result) => {
+				mqModule.endCurrentConversation((result) => {
 					console.log('结束对话 ==== ' + result);
 					if (result) {
 						console.log('结束成功');
@@ -99,16 +96,36 @@
 					}
 				});
 			},
-			
+
 			switchAppkey() {
-				testModule.switchAppkey('22222', (result) => {
+				mqModule.switchAppkey('22222', (result) => {
 					console.log('clientId：' + result);
 					if (result.length > 0) {
 						console.log('切换成功');
-					}else { 
+					}else {
 						console.log('切换失败');
 					}
 				});
+			},
+
+			configMeiQiaChatStyle() {
+				mqModule.initChatViewManger();
+				mqModule.configChatViewStyle({
+				  "navBarBackgroundColor": "#ffffff", // 设置导航栏的背景色；
+				  "navBarTitleTxtColor": "#000000", // 设置导航栏上的 title 的颜色；
+				  "enableShowClientAvatar": true, // 是否支持当前用户头像的显示
+				  "incomingMsgTextColor": "#FF5C5E", // 设置客服发送过来的message的文字颜色；
+				  "incomingBubbleColor": "#00CE7D", // 设置客服发送过来的message气泡颜色；
+				  "outgoingMsgTextColor": "#17C7D1", // 设置用户发送出去的message的文字颜色
+				  "outgoingBubbleColor": "#FFB652", // 设置用户发送出去的message气泡颜色；
+				  "backgroundColor": "#303D42", // 聊天窗口背景色；
+				  //以下配置暂时只支持ios
+				  "eventTextColor": "#ffffff", // 设置事件流的显示文字的颜色；
+				  "navTitleFont": 15, // 设置导航栏上的title的字体大小
+				  "enableRoundAvatar": false, // 是否开启圆形头像；
+				  "enableIncomingAvatar": true, // 是否支持左边头像的显示
+				});
+				mqModule.showMeiQiaChatView();
 			}
 		}
     }
