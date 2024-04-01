@@ -1,7 +1,7 @@
 {
     "name": "MeiQiaChatPlugin",
     "id": "MeiQia-ChatPlugin",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
     "_dp_nativeplugin": {
@@ -22,9 +22,6 @@
             ],
             "embedFrameworks": [
                 "MeiQiaSDK.framework"
-            ],
-            "resources": [
-                "MQChatViewAsset.bundle"
             ],
             "parameters": {
                 "MEIQIA_APPKEY_IOS": {

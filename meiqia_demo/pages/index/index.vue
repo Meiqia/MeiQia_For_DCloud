@@ -11,6 +11,7 @@
 		<button type="primary" @click="endCurrentConversation()">结束当前对话</button>
 		<button type="primary" @click="switchAppkey()">切换appkey登录</button>
 		<button type="primary" @click="configMeiQiaChatStyle()">聊天页面 UI 样式</button>
+		<button type="primary" @click="setLocalizedLanguage()">设置当前语言</button>
 	</view>
 </template>
 
@@ -126,6 +127,10 @@
 				  "enableIncomingAvatar": true, // 是否支持左边头像的显示
 				});
 				mqModule.showMeiQiaChatView();
+			},
+			
+			setLocalizedLanguage() {
+			    testModule.setLocalizedLanguage('ja');
 			}
 		}
     }

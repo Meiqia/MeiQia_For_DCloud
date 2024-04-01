@@ -29,6 +29,7 @@
 |getUnreadMessagesWithCustomizedId()|根据 customizedId 获取未读消息|
 |endCurrentConversation()|结束当前对话|
 |switchAppkey()|切换appkey登录|
+|setLocalizedLanguage()|设置当前语言|
 
 # 插件接口使用详解
 
@@ -326,6 +327,16 @@ switchAppkey() {
             console.log('切换失败');
         }
     });
+}
+```
+
+## 设置当前语言
+
+>配置本地化语言(仅iOS支持)，目前支持：中文简体、中文繁体、英文、马来语、印尼语，日语、泰语、越南语、葡萄牙语、印地语、西班牙语、俄语，韩语，不支持的语言默认显示为英文 如："en" ，"zh-Hans"，"zh-Hant"，"ms"， "id",  "ja"，"th"，"vi"，"pt"，"hi"， "es"，"ru"，"ko"（不调用此方法，则随系统语言变化）
+
+```js
+setLocalizedLanguage() {
+    testModule.setLocalizedLanguage('ms');
 }
 ```
 
