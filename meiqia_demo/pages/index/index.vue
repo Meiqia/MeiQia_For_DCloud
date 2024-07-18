@@ -128,7 +128,7 @@
 				});
 				mqModule.showMeiQiaChatView();
 			},
-			
+
 			setLocalizedLanguage() {
 			    testModule.setLocalizedLanguage('ja');
 			}

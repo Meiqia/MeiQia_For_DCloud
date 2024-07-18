@@ -43,7 +43,7 @@
                 }
             },
             "dependencies": [
-                "com.meiqia:androidx:4.0.10"
+                "com.meiqia:androidx:4.0.14"
             ],
             "abis": [
                 "armeabi-v7a",
