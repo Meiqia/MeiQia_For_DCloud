@@ -30,6 +30,7 @@
 |endCurrentConversation()|结束当前对话|
 |switchAppkey()|切换appkey登录|
 |setLocalizedLanguage()|设置当前语言|
+|setNoReallocate()|已指定分配客服后，下次指定分配是否需要重新分配 设置接口|
 
 # 插件接口使用详解
 
@@ -169,6 +170,16 @@ configScheduledAgentId() {
 > 
 > 不调用setScheduledRule方法，默认就是按照 vaule == 3的规则分配
 
+## 已指定分配客服后，下次指定分配是否需要重新分配 设置接口
+
+```js
+configSetNoReallocate() {
+    mqModule.initChatViewManger();
+    mqModule.setNoReallocate(false);
+    mqModule.showMeiQiaChatView();
+},
+```
+>说明：默认关闭。开启后，在已分配客服的情况下，下次触发分配，不再重新分配客服
 
 ## 使用开发者自定义的id上线
 
