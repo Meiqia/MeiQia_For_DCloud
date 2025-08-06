@@ -1,7 +1,7 @@
 {
     "name": "MeiQiaChatPlugin",
     "id": "MeiQia-ChatPlugin",
-    "version": "1.2.1",
+    "version": "1.2.3",
     "description": "美洽官方 Hbuilder 插件",
     "_dp_type": "nativeplugin",
     "_dp_nativeplugin": {
@@ -43,7 +43,7 @@
                 }
             },
             "dependencies": [
-                "com.meiqia:androidx:4.0.19"
+                "com.meiqia:androidx:4.1.3"
             ],
             "abis": [
                 "armeabi-v7a",
